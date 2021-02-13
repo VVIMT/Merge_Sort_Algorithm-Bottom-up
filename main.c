@@ -2,9 +2,9 @@
 
 int     main()
 {
-    long nb_line = 0;
-    char *line = NULL;
-    long **tabs = NULL;
+    long	nb_line = 0;
+    char	*line = NULL;
+    long	**tabs = NULL;
 
     // Create two tables, import the text file and store the numbers into the first table.
     tabs = store_numbers(NULL, NULL, line, &nb_line);
