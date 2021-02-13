@@ -14,8 +14,11 @@ int		main()
 	while (++i < nb_line - 1)
 		printf("%li\n", C[i]);
 
+	free(line);
 	free(tabs[0]);
 	free(tabs[1]);
+
+	free(tabs);
 
 	return 0;
 }

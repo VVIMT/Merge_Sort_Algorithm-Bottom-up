@@ -48,9 +48,7 @@ long    min(long iRight, long iEnd)
 long    **store_numbers(long *A, long *B, char *line, long *nb_line)
 {
     long **tabs = NULL;
-    tabs = ft_memalloc(sizeof(tabs) * 1);
-    *tabs = ft_memalloc(sizeof(*tabs) * 2);
-    A = ft_memalloc(sizeof(A) * 1);
+    tabs = ft_memalloc(sizeof(A) * 2);
 
     long    valid = 1;
     while (valid == 1)
@@ -64,7 +62,6 @@ long    **store_numbers(long *A, long *B, char *line, long *nb_line)
         }
         (*nb_line)++;
     }
-    ft_strdel(&line);
     B = ft_memalloc(sizeof(B) * (*nb_line) - 1);
 
     tabs[0] = A;
