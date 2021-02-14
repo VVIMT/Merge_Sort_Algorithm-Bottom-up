@@ -17,9 +17,7 @@ int		main()
 	free(line);
 	free(tabs[0]);
 	free(tabs[1]);
-
 	free(tabs);
 
 	return 0;
 }
-
