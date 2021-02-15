@@ -63,11 +63,11 @@ long    **store_numbers(long *A, long *B, char *line, long *nb_line)
             if (!(A = realloc(A, (*nb_line + 1) * sizeof(A))))
                 exit (-1);
             A[*nb_line] = ft_latoi(line);
-            if (line != NULL)
-            {
-                free(line);
-                line = NULL;
-            }
+        }
+        if (line != NULL)
+        {
+            free(line);
+            line = NULL;
         }
         (*nb_line)++;
     }
