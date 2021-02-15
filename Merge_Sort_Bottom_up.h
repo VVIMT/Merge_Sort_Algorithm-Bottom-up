@@ -20,11 +20,11 @@ typedef struct		s_gnl
 	struct s_gnl	*next;
 }					t_gnl;
 
-long*               BottomUpMergeSort(long *A, long *B, long n);
-long*               BottomUpMerge(long *A, long iLeft, long iRight, long iEnd, long *B);
-long                min(long iRight, long iEnd);
+long*				BottomUpMergeSort(long *A, long *B, long n);
+long*				BottomUpMerge(long *A, long iLeft, long iRight, long iEnd, long *B);
+long				min(long iRight, long iEnd);
 long				**store_numbers(long *A, long *B, char *line, long *nb_line);
-long                ft_latoi(const char *str);
-int                 get_next_line(const int fd, char **line);
+long				ft_latoi(const char *str);
+int					get_next_line(const int fd, char **line);
 
 #endif

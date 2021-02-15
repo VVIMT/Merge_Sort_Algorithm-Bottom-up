@@ -4,8 +4,6 @@ CC=gcc -g -std=c99 -lpthread
 
 CFLAGS=-Wall -Wextra -Werror
 
-HDDIRS=
-
 SRCS=main.c Merge_Sort_Bottom_up.c ft_latoi.c get_next_line.c
 
 OBJ=$(SRCS:.c=.o)
