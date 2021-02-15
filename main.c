@@ -6,7 +6,6 @@ int		main()
 	char	*line = NULL;
 	long	**tabs = NULL;
 
-    // Create two tables, import the text file and store the numbers into the first table.
 	tabs = store_numbers(NULL, NULL, line, &nb_line);
 	long	*C = BottomUpMergeSort(tabs[0], tabs[1], nb_line - 1);
 
@@ -14,10 +13,21 @@ int		main()
 	while (++i < nb_line - 1)
 		printf("%li\n", C[i]);
 
-	free(line);
-	free(tabs[0]);
-	free(tabs[1]);
-	free(tabs);
+	if (tabs[0] != NULL)
+	{
+		free(tabs[0]);
+		tabs[0] = NULL;
+	}
+	if (tabs[1] != NULL)
+	{
+		free(tabs[1]);
+		tabs[1] = NULL;
+	}
+	if (tabs != NULL)
+	{
+		free(tabs);
+		tabs = NULL;
+	}
 
 	return 0;
 }
