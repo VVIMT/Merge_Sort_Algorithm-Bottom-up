@@ -14,11 +14,20 @@ int	main()
         printf("%li\n", C[i]);
 
     if (tabs[0] != NULL)
-        ft_memdel((void **)tabs[0]);
+    {
+        free(tabs[0]);
+        tabs[0] = NULL;
+    }
     if (tabs[1] != NULL)
-        ft_memdel((void **)tabs[1]);
+    {
+        free(tabs[1]);
+        tabs[1] = NULL;
+    }
     if (tabs != NULL)
-        ft_memdel((void **)tabs);
+    {
+        free(tabs);
+        tabs = NULL;
+    }
 
     return 0;
 }
