@@ -51,7 +51,7 @@ long    **store_numbers(long *A, long *B, char *line, long *nb_line)
     long    **tabs = NULL;
     long    valid;
 
-    if (!(tabs = ft_memalloc(sizeof(A) * 2)))
+    if (!(tabs = malloc(sizeof(A) * 2)))
         exit (-1);
 
     valid = 1;
@@ -71,7 +71,7 @@ long    **store_numbers(long *A, long *B, char *line, long *nb_line)
         }
         (*nb_line)++;
     }
-    if (!(B = ft_memalloc(sizeof(B) * (*nb_line))))
+    if (!(B = malloc(sizeof(B) * (*nb_line))))
         exit (-1);
 
     tabs[0] = A;
