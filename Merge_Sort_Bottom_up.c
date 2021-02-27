@@ -1,6 +1,6 @@
 #include "Merge_Sort_Bottom_up.h"
 
-long*   BottomUpMergeSort(long *A, long *B, long n)
+long    *BottomUpMergeSort(long *A, long *B, long n)
 {
     long    *tmp;
 
@@ -21,7 +21,7 @@ long*   BottomUpMergeSort(long *A, long *B, long n)
     return (A);
 }
 
-long*   BottomUpMerge(long *A, long iLeft, long iRight, long iEnd, long *B)
+long    *BottomUpMerge(long *A, long iLeft, long iRight, long iEnd, long *B)
 {
     long    i = iLeft;
     long    j = iRight;
