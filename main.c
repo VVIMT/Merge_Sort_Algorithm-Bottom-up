@@ -2,15 +2,16 @@
 
 int	main()
 {
-    unsigned long long int  start_ns; // Milliseconds
+    unsigned long long int  start_ns; // Nanoseconds
     time_t                  start_s;  // Seconds
-    unsigned long long int  stop_ns; // Milliseconds
+    unsigned long long int  stop_ns; // Nanoseconds
     time_t                  stop_s;  // Seconds
     struct timespec         spec;
 
     clock_gettime(CLOCK_MONOTONIC, &spec);
     start_s  = spec.tv_sec;
-    start_ns = floor(spec.tv_nsec / 1.0e6); // Convert nanoseconds to milliseconds
+    start_ns = (unsigned long long int)spec.tv_nsec;
+    //start_ns %= (unsigned long long int)1e9;
 
     long    nb_line = 0;
     char    *line = NULL;
@@ -43,9 +44,9 @@ int	main()
 
     clock_gettime(CLOCK_MONOTONIC, &spec);
     stop_s  = spec.tv_sec;
-    stop_ns = ((spec.tv_nsec));// / 1.0e6)); // Convert nanoseconds to milliseconds
-    stop_ns %= (unsigned long long int)1e9;
-    printf("Elapsed time: %"PRIdMAX" seconds and %llu nanoseconds\n", \
+    stop_ns = (unsigned long long int)spec.tv_nsec;
+    //stop_ns %= (unsigned long long int)1e9;
+    printf("Elapsed time: %"PRIdMAX" seconds or %llu nanoseconds\n", \
     (intmax_t)stop_s - (intmax_t)start_s, stop_ns - start_ns);
 
     return 0;
