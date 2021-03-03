@@ -20,7 +20,7 @@ clean:
 
 fclean: clean
 	@make fclean -C libft/
-	@rm -rf $(NAME) a.out BottomUpMergeSort.dSYM
+	@rm -rf $(NAME) a.out BottomUpMergeSort.dSYM results
 
 re: fclean all
 

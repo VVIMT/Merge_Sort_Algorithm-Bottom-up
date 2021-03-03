@@ -2,6 +2,9 @@
 # define MERGE_SORT_BOTTOM_UP_H
 
 # define _GNU_SOURCE
+# define _POSIX_C_SOURCE 200809L
+# include <time.h>
+# include <math.h>
 # include <stdio.h>
 # include <ctype.h>
 # include <stdlib.h>
